@@ -18,8 +18,9 @@
 PreCommit:
   RuboCop:
     enabled: true
-    on_warn: pass # Treat all warnings as failures
+    on_warn: fail # Treat all warnings as failures
     problem_on_unmodified_line: ignore
+    command: ['bundle', 'exec', 'rubocop'] # Invoke within Bundler context
 
   BundleInstall:
     enabled: true
