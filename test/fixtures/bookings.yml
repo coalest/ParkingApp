@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  parking_spot: one
+  booked_at: 2022-04-14 16:35:28
+  expires_at: 2022-04-14 16:35:28
+  released_at: 2022-04-14 16:35:28
+
+two:
+  user: two
+  parking_spot: two
+  booked_at: 2022-04-14 16:35:28
+  expires_at: 2022-04-14 16:35:28
+  released_at: 2022-04-14 16:35:28
