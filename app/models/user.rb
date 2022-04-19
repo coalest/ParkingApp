@@ -23,8 +23,8 @@ class User < ApplicationRecord
       expires_at: Time.now.at_end_of_day)
   end
 
-  def release
-    return unless Booking.last_user == self
+  def release_spot
+    return unless Booking.last_user == self && !Booking.last.released?
 
     Booking.last.update(released_at: Time.now)
   end
