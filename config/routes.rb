@@ -8,5 +8,7 @@ Rails.application.routes.draw do
 
   get "home/index"
   get "/login" => "home#login"
+
+  post "/slack/command", to: "slack/commands#create"
   root to: "home#index"
 end
