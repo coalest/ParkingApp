@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_18_084940) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_19_145743) do
   create_table "bookings", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "parking_spot_id", null: false
-    t.datetime "booked_at", precision: nil
     t.datetime "expires_at", precision: nil
     t.datetime "released_at", precision: nil
     t.datetime "created_at", null: false

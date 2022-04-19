@@ -1,6 +1,12 @@
-<p style="color: green"><%= notice %></p>
+<h2>At this moment, the parking spot is: </h2>
 
-<h1>Bookings</h1>
+<div>
+  <%= button_to "Book Parking Spot", "#"%>
+</div>
+
+<p>
+Interested in the booking history?
+</p>
 
 <div id="bookings">
   <% @bookings.each do |booking| %>

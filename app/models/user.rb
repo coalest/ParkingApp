@@ -14,4 +14,18 @@ class User < ApplicationRecord
       # user.skip_confirmation!
     end
   end
+
+  def book_spot
+    return unless ParkingSpot.first.available?
+
+    Booking.create(user_id: id,
+      parking_spot_id: ParkingSpot.first.id,
+      expires_at: Time.now.at_end_of_day)
+  end
+
+  def release
+    return unless Booking.last_user == self
+
+    Booking.last.update(released_at: Time.now)
+  end
 end

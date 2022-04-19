@@ -14,7 +14,6 @@ class BookingsTest < ApplicationSystemTestCase
     visit bookings_url
     click_on "New booking"
 
-    fill_in "Booked at", with: @booking.booked_at
     fill_in "Expires at", with: @booking.expires_at
     fill_in "Parking spot", with: @booking.parking_spot_id
     fill_in "Released at", with: @booking.released_at
@@ -29,7 +28,6 @@ class BookingsTest < ApplicationSystemTestCase
     visit booking_url(@booking)
     click_on "Edit this booking", match: :first
 
-    fill_in "Booked at", with: @booking.booked_at
     fill_in "Expires at", with: @booking.expires_at
     fill_in "Parking spot", with: @booking.parking_spot_id
     fill_in "Released at", with: @booking.released_at
