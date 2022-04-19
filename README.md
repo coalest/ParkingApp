@@ -8,8 +8,8 @@ zone) or until someone releases it (so an option to release booking is also requ
 # Must-haves
 - [X] Sign-in via Slack on web front-end
 - [X] View history of bookings on web front-end
-- [ ] Possible to book a parking spot via Slack
-- [ ] Possible to release a booking
+- [X] Possible to book a parking spot via Slack
+- [X] Possible to release a booking
 - [X] Hosted on Github
 - [ ] Deployed on Heroku
 - [ ] Continuous Integration set up
