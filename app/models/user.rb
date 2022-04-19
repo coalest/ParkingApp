@@ -16,7 +16,8 @@ class User < ApplicationRecord
   end
 
   def book_spot
-    return unless ParkingSpot.first.available?
+    parking_spot = ParkingSpot.first
+    return unless parking_spot.available?
 
     Booking.create(user_id: id,
       parking_spot_id: ParkingSpot.first.id,
