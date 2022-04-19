@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
   resources :bookings
-  devise_for :users
+  devise_for :users, controllers: {omniauth_callbacks: "users/omniauth_callbacks"}
   get "home/index"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get "/login" => "home#login"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
   root to: "home#index"
 end

@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "omniauth/slack"
+
 class TurboFailureApp < Devise::FailureApp
   def respond
     if request_format == :turbo_stream
@@ -23,6 +25,9 @@ end
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+  config.omniauth :slack, Rails.application.credentials.slack_client_id,
+    Rails.application.credentials.slack_client_secret,
+    scope: "identity.basic,identity.email"
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.

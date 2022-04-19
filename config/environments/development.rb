@@ -41,6 +41,8 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
   config.action_mailer.default_url_options = {host: "localhost", port: 3000}
+  config.web_console.permissions = "217.138.209.154"
+  config.hosts << "49c5-217-138-209-153.eu.ngrok.io"
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
