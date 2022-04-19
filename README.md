@@ -6,15 +6,15 @@ command (ie. /parking book). Such booking will be valid until end of day (in cor
 zone) or until someone releases it (so an option to release booking is also required). 
 
 # Must-haves
-- [ ] Sign-in via Slack on web front-end
-- [ ] View history of bookings on web front-end
+- [X] Sign-in via Slack on web front-end
+- [X] View history of bookings on web front-end
 - [ ] Possible to book a parking spot via Slack
 - [ ] Possible to release a booking
 - [X] Hosted on Github
 - [ ] Deployed on Heroku
 - [ ] Continuous Integration set up
-- [ ] Most recent versions of Ruby and gems
-- [ ] Use overcommit and rubocop with Standard gem
+- [X] Most recent versions of Ruby and gems
+- [X] Use overcommit and rubocop with Standard gem
 
 # Nice-to-haves
 - [ ] Slack command for checking who booked the parking spot
