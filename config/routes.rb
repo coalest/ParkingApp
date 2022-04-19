@@ -6,9 +6,8 @@ Rails.application.routes.draw do
     delete "sign_out", to: "devise/sessions#destroy", as: :destroy_user_session
   end
 
-  get "home/index"
   get "/login" => "home#login"
 
   post "/slack/command", to: "slack/commands#create"
-  root to: "home#index"
+  root to: "bookings#index"
 end

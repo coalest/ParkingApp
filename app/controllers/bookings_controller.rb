@@ -3,6 +3,8 @@ class BookingsController < ApplicationController
 
   # GET /bookings or /bookings.json
   def index
+    redirect_to login_url unless user_signed_in?
+
     @bookings = Booking.all
   end
 
