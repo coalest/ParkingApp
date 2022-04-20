@@ -1,0 +1,20 @@
+language: 
+ — ruby
+rbenv:
+ — 3.1.2
+cache:
+ — bundler
+script:
+ — bundle install
+ — bin/rails db:create
+ — bin/rails db:migrate
+ — bin/rails test
+services:
+ — postgresql# deployment details - add while setting up Heroku 
+deploy:
+  provider: heroku
+ api_key:
+  secure: "ENCRYPTED_KEY_HERE"
+app: heroku-app-name-here
+  on:
+ repo: coalest/ParkingApp
