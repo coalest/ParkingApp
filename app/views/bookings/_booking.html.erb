@@ -1,22 +1,10 @@
 <div id="<%= dom_id booking %>">
   <p>
-    <strong>User:</strong>
-    <%= booking.user_id %>
+  <strong>Booking #<%= booking.id %>:</strong>
+    <%= User.find(booking.user_id).name.capitalize + " booked the parking spot at " %>
+    <%= booking.created_at %>
+    <% if booking.released_at %>
+      <%= "and released it at: #{booking.released_at}" %>
+    <% end %>
   </p>
-
-  <p>
-    <strong>Parking spot:</strong>
-    <%= booking.parking_spot_id %>
-  </p>
-
-  <p>
-    <strong>Expires at:</strong>
-    <%= booking.expires_at %>
-  </p>
-
-  <p>
-    <strong>Released at:</strong>
-    <%= booking.released_at %>
-  </p>
-
 </div>

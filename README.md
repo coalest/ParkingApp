@@ -17,7 +17,7 @@ zone) or until someone releases it (so an option to release booking is also requ
 - [X] Use overcommit and rubocop with Standard gem
 
 # Nice-to-haves
-- [ ] Slack command for checking who booked the parking spot
+- [X] Slack command for checking who booked the parking spot
 - [ ] Book and release booking via web
 - [ ] Possibility to book and release via SMS (Twilio)
 - [ ] Looks half-way decent

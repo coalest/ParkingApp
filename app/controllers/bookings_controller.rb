@@ -5,20 +5,18 @@ class BookingsController < ApplicationController
   def index
     redirect_to login_url unless user_signed_in?
 
+    @user = current_user
     @bookings = Booking.all
   end
 
-  # GET /bookings/1 or /bookings/1.json
-  def show
+  def book
+    current_user&.book_spot
+    redirect_back_or_to root_path, notice: (I18n.t "book.success")
   end
 
-  # GET /bookings/new
-  def new
-    @booking = Booking.new
-  end
-
-  # GET /bookings/1/edit
-  def edit
+  def release
+    current_user&.release_spot
+    redirect_back_or_to root_path, notice: (I18n.t "release.success")
   end
 
   # POST /bookings or /bookings.json

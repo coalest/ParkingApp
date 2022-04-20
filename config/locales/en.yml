@@ -30,16 +30,14 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  slack:
-    book:
-      "success": "You booked the parking spot!"
-      "failure": "The parking spot is currently unavailable."
-    release:
-      "success": "You released the parking spot!"
-      "failure": "Nothing to release, you don\u0027t have the spot booked right now."
-    thief:
-      "none": "The parking spot is available. No thieves exist."
-      "you": "The spot is currently booked by you. No thieves exist."
-      "someone": "Current parking spot thief: %{user}"
-    invalid_command: "Invalid command. Try \u0027book\u0027 or \u0027release\u0027 or \u0027thief\u0027."
-
+  book:
+    "success": "You successfully booked the parking spot."
+    "failure": "Sorry, the parking spot has already been booked."
+  release:
+    "success": "You successfully released the parking spot."
+    "failure": "Nothing to release, you don\u0027t have the spot booked right now."
+  who:
+    "none": "The parking spot is available. No one has booked it."
+    "you": "The parking spot is currently booked by you."
+    "someone": "The parking spot is currently booked by %{user}"
+  invalid_command: "Invalid command. Try \u0027book\u0027 or \u0027release\u0027 or \u0027thief\u0027."

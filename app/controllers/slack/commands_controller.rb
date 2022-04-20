@@ -6,9 +6,9 @@ class Slack::CommandsController < ApplicationController
     message = case params[:text].downcase
     when "book" then book
     when "release" then release
-    when "thief" then parking_spot_owner
+    when "who" then parking_spot_owner
     else
-      I18n.t "slack.invalid_command"
+      I18n.t "invalid_command"
     end
 
     render json: {text: message}
@@ -22,17 +22,17 @@ class Slack::CommandsController < ApplicationController
 
   def book
     if current_user.book_spot
-      I18n.t "slack.book.success"
+      I18n.t "book.success"
     else
-      I18n.t "slack.book.failure"
+      I18n.t "book.failure"
     end
   end
 
   def release
     if current_user.release_spot
-      I18n.t "slack.release.success"
+      I18n.t "release.success"
     else
-      I18n.t "slack.release.failure"
+      I18n.t "release.failure"
     end
   end
 
@@ -40,11 +40,11 @@ class Slack::CommandsController < ApplicationController
     parking_spot = ParkingSpot.first
 
     if parking_spot.available?
-      I18n.t "slack.thief.none"
+      I18n.t "who.none"
     elsif Booking.last_user == current_user
-      I18n.t "slack.thief.you"
+      I18n.t "who.you"
     else
-      I18n.t "slack.thief.someone", user: Booking.last_user.name
+      I18n.t "who.someone", user: Booking.last_user.name
     end
   end
 
