@@ -25,8 +25,12 @@ end
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
-  config.omniauth :slack, Rails.application.credentials.slack_client_id,
-    Rails.application.credentials.slack_client_secret,
+  slack_client_id = ENV["SLACK_CLIENT_ID"] ||
+    Rails.application.credentials.slack_client_id
+  slack_client_secret = ENV["SLACK_CLIENT_SECRET"] ||
+    Rails.application.credentials.slack_client_secret
+
+  config.omniauth :slack, slack_client_id, slack_client_secret,
     scope: "identity.basic,identity.email"
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
