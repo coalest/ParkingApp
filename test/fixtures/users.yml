@@ -4,8 +4,20 @@
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
+one: {
+  id: 1,
+  name: "Tester 1",
+  email: "",
+  uid: "ABCDEF",
+  provider: "slack",
+}
 # column: value
 #
-two: {}
+two: {
+  id: 2,
+  name: "Tester 2",
+  email: "",
+  uid: "AOISUD",
+  provider: "slack",
+}
 # column: value

@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  # :confirmable, :lockable, :timeoutable, :trackable
+
   devise :rememberable, :omniauthable, omniauth_providers: %i[slack]
 
   def self.from_omniauth(auth)
@@ -14,17 +15,16 @@ class User < ApplicationRecord
   end
 
   def book_spot
-    parking_spot = ParkingSpot.first
-    return unless parking_spot.available?
+    return unless ParkingSpot.available?
 
     Booking.create(user_id: id,
-      parking_spot_id: ParkingSpot.first.id,
-      expires_at: Time.now.at_end_of_day)
+      parking_spot_id: ParkingSpot.first.id)
   end
 
   def release_spot
-    return unless Booking.last_user == self && !Booking.last.released?
+    last_booking = Booking.last
+    return unless Booking.last_user == self && !last_booking.released?
 
-    Booking.last.update(released_at: Time.now)
+    last_booking.release!
   end
 end

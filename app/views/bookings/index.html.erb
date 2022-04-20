@@ -1,6 +1,6 @@
 <h2>
   At this moment, the parking spot is: 
-  <% if @spot.available? %>
+  <% if ParkingSpot.available? %>
     <%= " Available" %></h2>
     <div><%= button_to "Book Parking Spot", bookings_book_url %></div>
   <% elsif @spot_owner == @user %>
