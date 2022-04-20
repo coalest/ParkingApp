@@ -19,6 +19,7 @@ Slack app at: https://slack.com/oauth/v2/authorize?client_id=3390847623332.33886
 - [ ] Continuous Integration set up
 - [X] Most recent versions of Ruby and gems
 - [X] Use overcommit and rubocop with Standard gem
+- [ ] Correct time zones
 
 # Nice-to-haves
 - [X] Slack command for checking who booked the parking spot
