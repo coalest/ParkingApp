@@ -1,16 +1,14 @@
 <h2>
   At this moment, the parking spot is: 
-  <% if ParkingSpot.first.available? %>
-    <%= " Available" %>
+  <% if @spot.available? %>
+    <%= " Available" %></h2>
+    <div><%= button_to "Book Parking Spot", bookings_book_url %></div>
+  <% elsif @spot_owner == @user %>
+    <%= " Booked (by you)" %></h2>
+  <div><%= button_to "Release Parking Spot", bookings_release_url %></div>
   <% else %>
-    <%= " Booked" %>
+    <%= " Booked (by #{@spot_owner.name})" %></h2>
   <% end %>
-</h2>
-
-<div>
-  <%= button_to "Book Parking Spot", bookings_book_url %>
-  <%= button_to "Release Parking Spot", bookings_release_url %>
-</div>
 
 <strong>Booking History</strong>
 

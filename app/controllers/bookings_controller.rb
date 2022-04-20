@@ -5,6 +5,8 @@ class BookingsController < ApplicationController
   def index
     redirect_to login_url unless user_signed_in?
 
+    @spot = ParkingSpot.first
+    @spot_owner = Booking.last_user
     @user = current_user
     @bookings = Booking.all
   end
