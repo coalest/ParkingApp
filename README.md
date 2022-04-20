@@ -6,6 +6,7 @@ command (ie. /parking book). Such booking will be valid until end of day (in cor
 zone) or until someone releases it (so an option to release booking is also required). 
 
 Deployed at: https://cory-parking-app.herokuapp.com/
+Slack app at: https://slack.com/oauth/v2/authorize?client_id=3390847623332.3388691088674&scope=commands,chat:write&user_scope=identity.basic,identity.email
 
 # Must-haves
 - [X] Sign-in via Slack on web front-end
