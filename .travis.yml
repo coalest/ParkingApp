@@ -14,7 +14,9 @@ services:
 deploy:
   provider: heroku
  api_key:
-  secure: "ENCRYPTED_KEY_HERE"
+  secure: 
+"C6uaGuh9O20vqR8SKJO5LAGyOKnMOkA9Ctplj0YygCWPm3Hl3TVXxmgbSH50MLVmUN0WnxroLowyuCvwdy9Gi5OFQXMD1ryfiFjIqASV7v5xcw4SyF6LJnGD75rMzbVvY9TqSKU0NqE/8KRjUw2gO4YCha+o8khfRiqOU8bWbZWIjm+Wozd2R5yFgufs6EJqnxMlWFpSr+ybJ+rDCiwbT8Ymb9tWNpd3hxjN8p8FnS2dzTeTTLMB9cK9Cb1Qq6v1bKJerz6r+KdQSMkjVCikcpDK8zFVVn7XFZo4OWfXe1vAYkzGPTL/aN0giPzGTKHiAP5vVGGfOJPEMRW/cnAt4mA8duJsPn66px2zf8/D4QKrorevek8B/2TQY+MNP+741gPdU+rSygaSUZWaiYRVScl6kM64tN1LZSaqqnyN5fQB7WDj5UZEU+Kq9k6FU35ot4Ei7pxc5DvLDz8z8qEXdHKajNLp/YvoxqDOFjvghgN/nnX+xUf0jvpMtVG0IB43FY0LspWnO6+Eqz1pAvMn+Q8ALrxGJLHOt41LhQj2zveD9To7BVLT+7bzKMslFfYPSvG57ZvDj96+vFWqr9N2iyCviMNUWFvIZOLFjHGiV4Ngq2PUifGWpZzDJ0vQ4c6weY76icBJzBksQzmCCC1aorMbiMOlIejzjgq3G9tnmeg="
+
 app: heroku-app-name-here
   on:
  repo: coalest/ParkingApp
