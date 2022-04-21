@@ -37,9 +37,7 @@ class Slack::CommandsController < ApplicationController
   end
 
   def parking_spot_owner
-    parking_spot = ParkingSpot.first
-
-    if parking_spot.available?
+    if ParkingSpot.available?
       I18n.t "who.none"
     elsif Booking.last_user == current_user
       I18n.t "who.you"
