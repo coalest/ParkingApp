@@ -6,6 +6,7 @@ command (ie. /parking book). Such booking will be valid until end of day (in cor
 zone) or until someone releases it (so an option to release booking is also required). 
 
 Deployed at: https://cory-parking-app.herokuapp.com/
+
 Slack app at: https://slack.com/oauth/v2/authorize?client_id=3390847623332.3388691088674&scope=commands,chat:write&user_scope=identity.basic,identity.email
 
 # Must-haves
@@ -18,6 +19,7 @@ Slack app at: https://slack.com/oauth/v2/authorize?client_id=3390847623332.33886
 - [ ] Continuous Integration set up
 - [X] Most recent versions of Ruby and gems
 - [X] Use overcommit and rubocop with Standard gem
+- [ ] Correct time zones
 
 # Nice-to-haves
 - [X] Slack command for checking who booked the parking spot
